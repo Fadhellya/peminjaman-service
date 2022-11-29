@@ -24,14 +24,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class PeminjamanController {
     @Autowired
     private PeminjamanService peminjamanService;
+    
     @PostMapping("/")
     public Peminjaman savePeminjaman(@RequestBody Peminjaman peminjaman){
         return peminjamanService.savePeminjaman(peminjaman);
     }
+    
     @GetMapping("{id}")
-    public ResponseTemplateVO findPeminjamanById(@PathVariable("id")Long peminjamanId){
+    public ResponseTemplateVO getPeminjaman(@PathVariable("id") Long peminjamanId){
         return peminjamanService.getPeminjaman(peminjamanId);
     }
-    
-    
 }

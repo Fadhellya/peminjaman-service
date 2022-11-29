@@ -13,12 +13,13 @@ import lombok.NoArgsConstructor;
  * @author ASUS
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Buku {
     private Long bukuId;
-    private Long kode;
+    private String kode;
     private String judul;
+    private String pengarang;
     private String penerbit;
-    private Integer tahunterbit;
+    private int tahunTerbit;
 }
